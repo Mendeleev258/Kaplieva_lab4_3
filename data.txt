@@ -110,4 +110,4 @@ Carl Friedrich Gauss
 Disquisitiones Arithmeticae
 1801
 500
-Number Theory
+Technical

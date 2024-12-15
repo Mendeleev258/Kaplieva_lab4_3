@@ -133,6 +133,7 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="book.txt" />
     <Text Include="data.txt" />
   </ItemGroup>
   <ItemGroup>

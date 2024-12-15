@@ -1,5 +1,6 @@
 #pragma once
 #include "Book.h"
+#include <functional>
 
 using ptrBook = Book*;
 
@@ -37,6 +38,10 @@ public:
         size = 0;
     }
     FLIST(std::ifstream& file);
+    FLIST(const FLIST& other);
+    FLIST(FLIST&& tmp);    
+    FLIST& operator=(const FLIST& other);
+    FLIST& operator=(FLIST&& tmp);
     ~FLIST();
     ptrNODE get_head()
     {
@@ -66,6 +71,9 @@ public:
     void add_to_tail(ptrBook elem);
     void add_after(ptrNODE ptr, ptrBook elem);
     void del_from_head();
+    void del_after(ptrNODE ptr);
     void print(const char* message, std::ostream& stream = std::cout);
-    void sorting();
+    void sorting(std::function<int(ptrBook, ptrBook)> compare);
+    void clear(ptrNODE& begin, ptrNODE& end);
+    void clear();
 };
